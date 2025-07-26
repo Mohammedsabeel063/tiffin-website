@@ -65,22 +65,24 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t bg-white/90 backdrop-blur-sm">
+          <div className="md:hidden py-4 border-t bg-white/90 backdrop-blur-sm px-4 w-full">
             <nav className="flex flex-col space-y-4 text-lg font-semibold">
               <a href="#home" className="text-gray-800 hover:text-yellow-600">Home</a>
               <a href="#about" className="text-gray-800 hover:text-yellow-600">About</a>
               <a href="#menu" className="text-gray-800 hover:text-yellow-600">Menu</a>
               <a href="#contact" className="text-gray-800 hover:text-yellow-600">Contact</a>
-              <div className="flex items-center text-gray-800 mt-3">
-                <Phone className="h-5 w-5 mr-2 text-yellow-600" />
+
+              <div className="flex items-start text-gray-800 mt-3">
+                <Phone className="h-5 w-5 mr-2 text-yellow-600 mt-1" />
                 <span>+91 96113 33720</span>
               </div>
+
               <div
-                className="flex items-center text-gray-800 cursor-pointer"
+                className="flex items-start text-gray-800 cursor-pointer"
                 onClick={() => window.open(googleMapsLink, '_blank')}
               >
-                <MapPin className="h-5 w-5 mr-2 text-yellow-600" />
-                <span>{fullAddress}</span>
+                <MapPin className="h-5 w-5 mr-2 text-yellow-600 mt-1" />
+                <span className="break-words">{fullAddress}</span>
               </div>
             </nav>
           </div>
