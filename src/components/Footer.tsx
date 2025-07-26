@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Phone, Mail, MapPin, Heart } from 'lucide-react';
-import { Instagram, Youtube, MessageCircle } from 'react-icons/fa';
+import { FaInstagram, FaYoutube, FaRegCommentDots } from 'react-icons/fa';
 
 const Footer = () => {
   const [isOpen, setIsOpen] = useState(false);
