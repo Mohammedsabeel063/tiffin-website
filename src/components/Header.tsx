@@ -6,7 +6,7 @@ const Header = () => {
   const [showFullAddress, setShowFullAddress] = useState(false);
 
   const shortAddress = 'Lakkasandra, Bengaluru';
-  const fullAddress = 'https://maps.google.com?q=16/16,%204th%20Main%20Road,%20Lakkasandra,%20Laljinagar,%20Wilson%20Garden,%20Bengaluru,%20Karnataka&ftid=0x3bae15b654fa61bd:0xef6f8d84a8c86fc0&entry=gps&lucs=,94259550,94275319,94224825,94227247,94227248,94231188,47071704,47069508,94218641,94282130,94203019,47084304&g_st=ipc';
+  const fullAddress = '16/16, 4th Main Rd, Lakkasandra, Laljinagar, Wilson Garden, Bengaluru, Karnataka 560030';
   const googleMapsLink = `https://www.google.com/maps/place/${encodeURIComponent(fullAddress)}`;
 
   return (
