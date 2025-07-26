@@ -14,13 +14,13 @@ const Header = () => {
       <div className="absolute inset-0 bg-white/80 backdrop-blur-sm" />
 
       <div className="relative px-4 sm:px-6 lg:px-10 max-w-screen-xl mx-auto w-full">
-        <div className="flex flex-col md:flex-row md:justify-between items-center py-4 gap-y-4">
-          {/* Logo and Name - aligned left */}
-          <div className="flex items-center space-x-4 min-w-0 md:mr-auto">
+        <div className="flex flex-col md:flex-row justify-between items-center py-4 gap-y-4">
+          {/* Left: Logo and Name */}
+          <div className="flex items-center space-x-4 min-w-0 md:justify-start w-full md:w-auto">
             <img 
               src="/logo.png"
               alt="Restaurant Logo" 
-              className="h-20 w-20 sm:h-24 sm:w-24 object-contain rounded-full border-4 border-yellow-500 shadow bg-white"
+              className="h-16 w-16 sm:h-20 sm:w-20 object-contain rounded-full border-4 border-yellow-500 shadow bg-white"
             />
             <div>
               <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-serif leading-tight">
@@ -32,8 +32,8 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Navigation + Info - aligned right */}
-          <div className="hidden md:flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-8 md:ml-auto">
+          {/* Right: Nav + Info */}
+          <div className="hidden md:flex flex-col lg:flex-row items-center justify-end space-y-4 lg:space-y-0 lg:space-x-8 w-full md:w-auto">
             <nav className="flex space-x-6 text-lg font-semibold">
               <a href="#home" className="text-gray-800 hover:text-yellow-600 transition-colors">Home</a>
               <a href="#about" className="text-gray-800 hover:text-yellow-600 transition-colors">About</a>
@@ -59,13 +59,13 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Mobile Toggle Button */}
+          {/* Mobile Toggle */}
           <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
-        {/* Mobile Menu Dropdown */}
+        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t bg-white/90 backdrop-blur-sm">
             <nav className="flex flex-col space-y-4 text-lg font-semibold">
