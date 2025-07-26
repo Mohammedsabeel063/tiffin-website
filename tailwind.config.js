@@ -2,6 +2,16 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    container: {
+      center: true,
+      padding: '1rem',
+      screens: {
+        sm: '100%',
+        md: '100%',
+        lg: '1024px',
+        xl: '1280px',
+      },
+    },
     extend: {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
@@ -27,6 +37,10 @@ export default {
           '50%': { opacity: 1, transform: 'translateY(-10px) scale(1.02)' },
           '100%': { opacity: 1, transform: 'translateY(0) scale(1)' },
         },
+      },
+      padding: {
+        'safe-top': 'env(safe-area-inset-top)',
+        'safe-bottom': 'env(safe-area-inset-bottom)',
       },
       colors: {
         primary: '#eab308',
