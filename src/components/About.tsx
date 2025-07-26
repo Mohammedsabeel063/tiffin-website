@@ -47,16 +47,18 @@ const About = () => {
 
         {/* Mission Section */}
         <div className="grid md:grid-cols-2 gap-10 items-center mb-20 animate-fade-in-up max-w-[1280px] mx-auto">
-          {/* Vimeo Embed */}
+          {/* Local Video instead of Vimeo */}
           <div className="w-full h-full">
             <div className="rounded-3xl shadow-xl w-full aspect-video overflow-hidden">
-              <iframe
-                src="https://player.vimeo.com/video/1104689279?autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0"
-                className="w-full h-full"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-                title="M&F Kitchen Video"
-              ></iframe>
+              <video
+                ref={videoRef}
+                src="/mom-cooking.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 
