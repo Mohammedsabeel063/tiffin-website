@@ -76,10 +76,15 @@ const Footer = () => {
               </div>
               <div className="flex items-start">
                 <MapPin className="mr-2 text-yellow-400" size={20} />
-                <span>
+                <a
+                  href="https://www.google.com/maps/place/16th+Cross,+4th+Main+Rd,+Lakkasandra,+Bengaluru,+Karnataka+560030"
+                  className="hover:text-yellow-400"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   16th Cross, 4th Main Rd<br />
                   Lakkasandra, Bengaluru, Karnataka 560030
-                </span>
+                </a>
               </div>
               <div className="mt-4">
                 <p className="text-yellow-400 font-semibold">Opening Hours</p>
