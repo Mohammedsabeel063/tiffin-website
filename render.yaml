@@ -2,10 +2,13 @@ services:
   - type: web
     name: mandf-kitchen
     runtime: python
-    buildCommand: npm run build
+    buildCommand: |
+      npm install
+      npm run build
+      pip install -r requirements.txt
     startCommand: gunicorn app:app
     envVars:
       - key: PYTHON_VERSION
-        value: 3.11
+        value: 3.11.8
       - key: NODE_VERSION
-        value: 18
+        value: 20.12.2
