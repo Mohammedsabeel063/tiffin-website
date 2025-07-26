@@ -2,7 +2,7 @@ services:
   - type: web
     name: tiffin-website
     env: python
-    buildCommand: npm install && npm run build
+    buildCommand: chmod +x build.sh && ./build.sh
     startCommand: gunicorn app:app
     staticPublishPath: dist
     envVars:
