@@ -27,10 +27,19 @@ fi
 
 echo "index.html found in dist directory"
 
+# Copy assets to root for fallback
+echo "Copying assets to root directory for fallback..."
+cp -r dist/assets ./
+cp dist/index.html ./index.html
+
+echo "Assets copied to root directory"
+
 # Install Python dependencies
 echo "Installing Python dependencies..."
 pip install -r requirements.txt
 
 echo "Build completed successfully!"
 echo "Files in dist directory:"
-ls -la dist/ 
+ls -la dist/
+echo "Files in root directory:"
+ls -la ./ 
