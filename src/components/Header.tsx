@@ -26,9 +26,10 @@ const Header = () => {
               <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-serif leading-tight">
                 M&F Kitchen
               </h1>
-              <p className="text-lg sm:text-xl text-yellow-600 italic font-medium">
-                Ghar Ka Swad, Cloud Mein
+              <p className="text-sm sm:text-base text-yellow-600 italic font-medium">
+                 Ghar Ka Swad, Cloud Mein
               </p>
+
             </div>
           </div>
 
