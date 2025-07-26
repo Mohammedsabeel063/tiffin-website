@@ -115,7 +115,7 @@ const Contact = () => {
         <div className="mt-16 overflow-hidden rounded-2xl shadow-xl w-full">
           <iframe
             title="Google Map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.296107701593!2d77.594!3d12.942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15f2c18b3fdb%3A0x9165fc221b23ad9!2sLakkasandra%2C%20Bengaluru%2C%20Karnataka%20560030!5e0!3m2!1sen!2sin!4v1721800000000"
+            src="https://maps.google.com?q=16/16,%204th%20Main%20Road,%20Lakkasandra,%20Laljinagar,%20Wilson%20Garden,%20Bengaluru,%20Karnataka&ftid=0x3bae15b654fa61bd:0xef6f8d84a8c86fc0&entry=gps&lucs=,94259550,94275319,94224825,94227247,94227248,94231188,47071704,47069508,94218641,94282130,94203019,47084304&g_st=ipc"
             width="100%"
             height="450"
             allowFullScreen
