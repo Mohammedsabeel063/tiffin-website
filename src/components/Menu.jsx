@@ -6,7 +6,7 @@ const Menu = () => {
   const dishes = [
     { img: "/menu1.jpg", title: "Chicken Dry", desc: "Crispy, juicy dry chicken tossed in signature spices." },
     { img: "/menu2.jpg", title: "Pepper Chicken Dry", desc: "Bold pepper flavor on tender chicken pieces." },
-    { img: "/menu3.jpg", title: "Matar Rice", desc: "Hearty rice dish with spicy mutton chunks." },
+    { img: "/menu3.jpg", title: "Jeera Rice", desc: "Hearty rice dish with spicy mutton chunks." },
     { img: "/menu4.jpg", title: "Biryani Rice", desc: "Classic biryani rice bursting with traditional flavors." },
     { img: "/menu5.jpg", title: "Chicken Dry Combo", desc: "A combo plate with dry chicken and rice." },
     { img: "/menu6.jpg", title: "Chicken Kebab Combo", desc: "Grilled kebabs with rice and salad." },
