@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Phone, Mail, MapPin, Heart } from 'lucide-react';
-import { FaInstagram, FaYoutube, FaRegCommentDots } from 'react-icons/fa';
+import { FaInstagram as Instagram, FaYoutube as Youtube, FaRegCommentDots as MessageCircle } from 'react-icons/fa';
 
 const Footer = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,9 +38,9 @@ const Footer = () => {
               Located in Lakkasandra, Bengaluru, we're committed to serving delicious, homemade meals that bring comfort and joy.
             </p>
             <div className="flex space-x-4 mt-4">
-              <a href="#" className="text-yellow-500 hover:text-yellow-400"><FaInstagram size={24} /></a>
-              <a href="#" className="text-yellow-500 hover:text-yellow-400"><FaYoutube size={24} /></a>
-              <a href="#" className="text-yellow-500 hover:text-yellow-400"><FaRegCommentDots size={24} /></a>
+              <a href="#" className="text-yellow-500 hover:text-yellow-400"><Instagram size={24} /></a>
+              <a href="#" className="text-yellow-500 hover:text-yellow-400"><Youtube size={24} /></a>
+              <a href="#" className="text-yellow-500 hover:text-yellow-400"><MessageCircle size={24} /></a>
             </div>
           </div>
 
