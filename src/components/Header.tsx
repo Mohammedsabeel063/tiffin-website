@@ -41,7 +41,7 @@ const Header = () => {
             <div className="flex items-center space-x-6 pl-0 lg:pl-6 border-l-0 lg:border-l border-gray-300 text-base">
               <div className="flex items-center text-gray-800">
                 <Phone className="h-5 w-5 mr-2 text-yellow-600" />
-                <span>+91 96113 33720</span>
+                <a href="tel:+919611333720" className="hover:text-yellow-600">+91 96113 33720</a>
               </div>
               <div
                 className="flex items-center cursor-pointer text-gray-800 hover:text-yellow-600"
@@ -74,7 +74,7 @@ const Header = () => {
 
               <div className="flex items-start text-gray-800 mt-3">
                 <Phone className="h-5 w-5 mr-2 text-yellow-600 mt-1" />
-                <span>+91 96113 33720</span>
+                <a href="tel:+919611333720" className="hover:text-yellow-600">+91 96113 33720</a>
               </div>
 
               <div
