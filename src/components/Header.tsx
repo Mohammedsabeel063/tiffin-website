@@ -1,3 +1,4 @@
+// Header.tsx
 import React, { useState } from 'react';
 import { Menu, X, Phone, MapPin } from 'lucide-react';
 
@@ -7,90 +8,74 @@ const Header = () => {
 
   const shortAddress = 'Lakkasandra, Bengaluru';
   const fullAddress = '12/3, 2nd Cross Rd, Lakkasandra, Wilson Garden, Bengaluru, Karnataka 560030';
-
   const googleMapsLink = `https://www.google.com/maps/place/${encodeURIComponent(fullAddress)}`;
 
   return (
-    <header
-      className="relative shadow-md sticky top-0 z-50 w-full"
-      style={{
-        backgroundImage: 'url("/header-bg.jpg")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }}
-    >
-      <div className="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
+    <header className="relative shadow-md sticky top-0 z-50 w-full">
+      <div className="absolute inset-0 bg-white/80 backdrop-blur-sm" />
 
-      <div className="relative px-4 sm:px-6 lg:px-12 w-full">
-        <div className="flex items-center justify-between py-6 w-full">
-          <div className="flex items-center space-x-6">
+      <div className="relative px-4 sm:px-6 lg:px-10 max-w-screen-xl mx-auto w-full">
+        <div className="flex flex-wrap justify-between items-center py-6 gap-y-4">
+          {/* Logo and Name */}
+          <div className="flex items-center space-x-4 min-w-0">
             <img 
               src="/logo.png"
               alt="Restaurant Logo" 
-              className="h-40 w-40 object-contain rounded-full border-[6px] border-yellow-500 shadow-xl bg-white"
+              className="h-20 w-20 sm:h-28 sm:w-28 md:h-32 md:w-32 object-contain rounded-full border-4 border-yellow-500 shadow bg-white"
             />
-            <div className="text-left">
-              <h1 className="text-6xl font-extrabold text-gray-900 font-serif leading-tight">
+            <div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 font-serif leading-tight">
                 M&F Kitchen
               </h1>
-              <p className="text-xl text-yellow-600 italic font-medium">
+              <p className="text-lg sm:text-xl text-yellow-600 italic font-medium">
                 Ghar Ka Swad, Cloud Mein
               </p>
             </div>
           </div>
 
-          <div className="hidden md:flex items-center space-x-12 ml-auto">
-            <nav className="flex space-x-10 text-2xl font-semibold">
+          {/* Nav + Info */}
+          <div className="hidden md:flex items-center space-x-8">
+            <nav className="flex space-x-6 text-lg font-semibold">
               <a href="#home" className="text-gray-800 hover:text-yellow-600 transition-colors">Home</a>
               <a href="#about" className="text-gray-800 hover:text-yellow-600 transition-colors">About</a>
               <a href="#contact" className="text-gray-800 hover:text-yellow-600 transition-colors">Contact</a>
             </nav>
-            <div className="hidden lg:flex items-center space-x-8 text-2xl font-semibold pl-8 border-l border-gray-300">
+            <div className="hidden lg:flex items-center space-x-6 pl-6 border-l border-gray-300 text-base">
               <div className="flex items-center text-gray-800">
-                <Phone className="h-6 w-6 mr-2 text-yellow-600" />
+                <Phone className="h-5 w-5 mr-2 text-yellow-600" />
                 <span>+91 96113 33720</span>
               </div>
-
-              {/* Address - Click to toggle full address or open map */}
               <div
-                className="flex items-center text-gray-800 cursor-pointer group"
+                className="flex items-center cursor-pointer text-gray-800 hover:text-yellow-600"
                 onClick={() => window.open(googleMapsLink, '_blank')}
                 onMouseEnter={() => setShowFullAddress(true)}
                 onMouseLeave={() => setShowFullAddress(false)}
               >
-                <MapPin className="h-6 w-6 mr-2 text-yellow-600" />
-                <span className="relative transition-all duration-300 group-hover:text-yellow-600">
-                  <span className={`block overflow-hidden transition-all duration-500 ease-in-out ${
-                    showFullAddress ? 'max-h-[300px]' : 'max-h-[24px]'
-                  }`}>
-                    {showFullAddress ? fullAddress : shortAddress}
-                  </span>
+                <MapPin className="h-5 w-5 mr-2 text-yellow-600" />
+                <span className="overflow-hidden whitespace-nowrap text-ellipsis max-w-[180px]">
+                  {showFullAddress ? fullAddress : shortAddress}
                 </span>
               </div>
             </div>
           </div>
 
-          {/* MOBILE MENU BUTTON */}
-          <button className="md:hidden p-2 ml-auto" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          {/* Mobile Toggle */}
+          <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
-        {/* MOBILE MENU */}
+        {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t bg-white/90 backdrop-blur-sm relative z-10">
-            <nav className="flex flex-col space-y-4 text-xl font-semibold">
-              <a href="#home" className="text-gray-800 hover:text-yellow-600 transition-colors">Home</a>
-              <a href="#about" className="text-gray-800 hover:text-yellow-600 transition-colors">About</a>
-              <a href="#contact" className="text-gray-800 hover:text-yellow-600 transition-colors">Contact</a>
-
-              <div className="flex items-center mt-4 text-gray-800">
+          <div className="md:hidden py-4 border-t bg-white/90 backdrop-blur-sm">
+            <nav className="flex flex-col space-y-4 text-lg font-semibold">
+              <a href="#home" className="text-gray-800 hover:text-yellow-600">Home</a>
+              <a href="#about" className="text-gray-800 hover:text-yellow-600">About</a>
+              <a href="#contact" className="text-gray-800 hover:text-yellow-600">Contact</a>
+              <div className="flex items-center text-gray-800 mt-3">
                 <Phone className="h-5 w-5 mr-2 text-yellow-600" />
                 <span>+91 96113 33720</span>
               </div>
-
-              {/* Mobile Address - Click to open map */}
               <div
                 className="flex items-center text-gray-800 cursor-pointer"
                 onClick={() => window.open(googleMapsLink, '_blank')}

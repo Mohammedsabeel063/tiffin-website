@@ -8,7 +8,7 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center overflow-hidden bg-black text-white"
     >
-      {/* Background image with overlay */}
+      {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: 'url("/hero-bg.jpg")' }}
@@ -17,16 +17,16 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 text-center animate-fade-in-up">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-cinzel font-extrabold mb-8 leading-tight">
+      <div className="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-10 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-cinzel font-extrabold mb-6 leading-tight">
             Welcome to
-            <span className="block text-yellow-400 text-6xl sm:text-7xl md:text-8xl leading-tight animate-slide-up delay-200 font-cinzel">
+            <span className="block text-yellow-400 text-5xl sm:text-6xl md:text-7xl leading-tight mt-2 font-cinzel">
               M&F Kitchen
             </span>
           </h1>
 
-          <p className="text-lg sm:text-xl md:text-2xl mb-12 text-gray-200 font-poppins leading-relaxed tracking-wide animate-fade-in-up delay-300">
+          <p className="text-base sm:text-lg md:text-xl mb-10 text-gray-200 font-poppins tracking-wide">
             From hostel nights to hectic office days, <br />
             you don’t have to miss the comfort of home-cooked meals. <br />
             <span className="text-yellow-300 font-semibold">
@@ -34,31 +34,31 @@ const Hero = () => {
             </span>
           </p>
 
-          <div className="flex flex-wrap justify-center gap-10 mb-12 text-white font-poppins text-xl animate-fade-in-up delay-500">
-            <div className="flex items-center space-x-3">
-              <Star className="h-7 w-7 text-yellow-400" />
+          <div className="flex flex-wrap justify-center gap-6 mb-10 text-white text-base sm:text-lg">
+            <div className="flex items-center space-x-2">
+              <Star className="h-6 w-6 text-yellow-400" />
               <span>Premium Quality</span>
             </div>
-            <div className="flex items-center space-x-3">
-              <Clock className="h-7 w-7 text-yellow-400" />
+            <div className="flex items-center space-x-2">
+              <Clock className="h-6 w-6 text-yellow-400" />
               <span>Fast Service</span>
             </div>
-            <div className="flex items-center space-x-3">
-              <Heart className="h-7 w-7 text-yellow-400" />
+            <div className="flex items-center space-x-2">
+              <Heart className="h-6 w-6 text-yellow-400" />
               <span>Loved by All</span>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center font-poppins animate-fade-in-up delay-700">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#about"
-              className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-10 rounded-full transition transform hover:scale-110 shadow-lg text-lg"
+              className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-full text-base sm:text-lg transition"
             >
               Learn More About Us
             </a>
             <a
               href="#contact"
-              className="border-2 border-white hover:bg-white hover:text-black text-white font-bold py-4 px-10 rounded-full transition transform hover:scale-110 text-lg"
+              className="border-2 border-white hover:bg-white hover:text-black text-white font-bold py-3 px-8 rounded-full text-base sm:text-lg transition"
             >
               Contact Us
             </a>
