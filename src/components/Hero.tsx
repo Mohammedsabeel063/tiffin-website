@@ -1,3 +1,4 @@
+// Hero.tsx
 import React from 'react';
 import { Star, Clock, Heart } from 'lucide-react';
 
@@ -10,7 +11,7 @@ const Hero = () => {
       {/* Background image with overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: 'url(\"/hero-bg.jpg\")' }}
+        style={{ backgroundImage: 'url("/hero-bg.jpg")' }}
       >
         <div className="absolute inset-0 bg-black/60" />
       </div>

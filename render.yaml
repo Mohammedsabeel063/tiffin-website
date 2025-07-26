@@ -3,7 +3,7 @@ services:
     name: mandf-kitchen
     runtime: python
     buildCommand: |
-      npm install
+      npm ci
       npm run build
       pip install -r requirements.txt
     startCommand: gunicorn app:app --timeout 300 --workers 3
@@ -12,3 +12,4 @@ services:
         value: 3.11.8
       - key: NODE_VERSION
         value: 20.12.2
+    staticPublishPath: dist
