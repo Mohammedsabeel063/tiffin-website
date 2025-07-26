@@ -38,9 +38,27 @@ const Footer = () => {
               Located in Lakkasandra, Bengaluru, we're committed to serving delicious, homemade meals that bring comfort and joy.
             </p>
             <div className="flex space-x-4 mt-4">
-              <a href="#" className="text-yellow-500 hover:text-yellow-400"><Instagram size={24} /></a>
-              <a href="#" className="text-yellow-500 hover:text-yellow-400"><Youtube size={24} /></a>
-              <a href="#" className="text-yellow-500 hover:text-yellow-400"><MessageCircle size={24} /></a>
+              <a
+                href="https://www.instagram.com/mnf_kitchen?igsh=eGp6cXB2MGh5NHdz"
+                className="text-yellow-500 hover:text-yellow-400"
+                target="_blank" rel="noopener noreferrer"
+              >
+                <Instagram size={24} />
+              </a>
+              <a
+                href="https://youtube.com/@mnf-kitchen?si=t3ayntsNehfFwNKs"
+                className="text-yellow-500 hover:text-yellow-400"
+                target="_blank" rel="noopener noreferrer"
+              >
+                <Youtube size={24} />
+              </a>
+              <a
+                href="https://wa.me/919611333720"
+                className="text-yellow-500 hover:text-yellow-400"
+                target="_blank" rel="noopener noreferrer"
+              >
+                <MessageCircle size={24} />
+              </a>
             </div>
           </div>
 
@@ -50,15 +68,18 @@ const Footer = () => {
             <div className="space-y-3 text-gray-300">
               <div className="flex items-center">
                 <Phone className="mr-2 text-yellow-400" size={20} />
-                <span>+91 96113 33720</span>
+                <a href="tel:+919611333720" className="hover:text-yellow-400">+91 96113 33720</a>
               </div>
               <div className="flex items-center">
                 <Mail className="mr-2 text-yellow-400" size={20} />
-                <span>mnfkitchens@gmail.com</span>
+                <a href="mailto:mnfkitchens@gmail.com" className="hover:text-yellow-400">mnfkitchens@gmail.com</a>
               </div>
               <div className="flex items-start">
                 <MapPin className="mr-2 text-yellow-400" size={20} />
-                <span>16th Cross, 4th Main Rd<br />Lakkasandra, Bengaluru, Karnataka 560030</span>
+                <span>
+                  16th Cross, 4th Main Rd<br />
+                  Lakkasandra, Bengaluru, Karnataka 560030
+                </span>
               </div>
               <div className="mt-4">
                 <p className="text-yellow-400 font-semibold">Opening Hours</p>
