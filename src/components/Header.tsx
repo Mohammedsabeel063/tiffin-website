@@ -1,4 +1,3 @@
-// Header.tsx
 import React, { useState } from 'react';
 import { Menu, X, Phone, MapPin } from 'lucide-react';
 
@@ -15,7 +14,7 @@ const Header = () => {
       <div className="absolute inset-0 bg-white/80 backdrop-blur-sm" />
 
       <div className="relative px-4 sm:px-6 lg:px-10 max-w-screen-xl mx-auto w-full">
-        <div className="flex flex-wrap justify-between items-center py-6 gap-y-4">
+        <div className="flex flex-col md:flex-row md:justify-between items-center py-6 gap-y-4">
           {/* Logo and Name */}
           <div className="flex items-center space-x-4 min-w-0">
             <img 
@@ -34,13 +33,13 @@ const Header = () => {
           </div>
 
           {/* Nav + Info */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-8">
             <nav className="flex space-x-6 text-lg font-semibold">
               <a href="#home" className="text-gray-800 hover:text-yellow-600 transition-colors">Home</a>
               <a href="#about" className="text-gray-800 hover:text-yellow-600 transition-colors">About</a>
               <a href="#contact" className="text-gray-800 hover:text-yellow-600 transition-colors">Contact</a>
             </nav>
-            <div className="hidden lg:flex items-center space-x-6 pl-6 border-l border-gray-300 text-base">
+            <div className="flex items-center space-x-6 pl-0 lg:pl-6 border-l-0 lg:border-l border-gray-300 text-base">
               <div className="flex items-center text-gray-800">
                 <Phone className="h-5 w-5 mr-2 text-yellow-600" />
                 <span>+91 96113 33720</span>

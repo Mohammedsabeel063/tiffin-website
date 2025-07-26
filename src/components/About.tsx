@@ -31,7 +31,7 @@ const About = () => {
 
   return (
     <section id="about" className="py-20 bg-white w-full">
-      <div className="w-full px-4 sm:px-6 md:px-12 max-w-screen-xl mx-auto">
+      <div className="w-full px-4 sm:px-6 md:px-12 max-w-[1440px] mx-auto">
         {/* Heading */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-6xl font-cinzel text-gray-900 mb-4 tracking-wide">
@@ -46,7 +46,7 @@ const About = () => {
         </div>
 
         {/* Mission Section */}
-        <div className="grid md:grid-cols-2 gap-10 items-center mb-20 animate-fade-in-up">
+        <div className="grid md:grid-cols-2 gap-10 items-center mb-20 animate-fade-in-up max-w-[1280px] mx-auto">
           {/* Video */}
           <div className="w-full h-full">
             <video

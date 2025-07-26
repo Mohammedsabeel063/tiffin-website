@@ -23,9 +23,9 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white w-full">
       <div className="max-w-screen-xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Logo + About */}
-          <div className="space-y-4">
+        <div className="flex flex-col md:flex-row justify-between gap-12">
+          {/* Left: Logo, About, Social */}
+          <div className="flex-1 space-y-4">
             <div className="flex items-center mb-4">
               <img src="/logo.png" alt="M&F Logo" className="h-16 w-16 rounded-full" />
               <div className="ml-3">
@@ -34,7 +34,8 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 text-base leading-relaxed">
-              Experience authentic home‑style cooking with fresh ingredients and warm hospitality. Located in Lakkasandra, Bengaluru, we're committed to serving delicious, homemade meals that bring comfort and joy.
+              Experience authentic home‑style cooking with fresh ingredients and warm hospitality.
+              Located in Lakkasandra, Bengaluru, we're committed to serving delicious, homemade meals that bring comfort and joy.
             </p>
             <div className="flex space-x-4 mt-4">
               <a href="#" className="text-yellow-500 hover:text-yellow-400"><Instagram size={24} /></a>
@@ -43,20 +44,8 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-yellow-400 text-xl font-bold mb-3">Quick Links</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li><a href="#home" className="hover:text-yellow-400">Home</a></li>
-              <li><a href="#about" className="hover:text-yellow-400">About</a></li>
-              <li><a href="#contact" className="hover:text-yellow-400">Contact</a></li>
-              <li><a href="#" className="hover:text-yellow-400">Catering</a></li>
-              <li><a href="#" className="hover:text-yellow-400">Events</a></li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
+          {/* Right: Contact Info */}
+          <div className="flex-1 space-y-4">
             <h4 className="text-yellow-400 text-xl font-bold mb-3">Contact Info</h4>
             <div className="space-y-3 text-gray-300">
               <div className="flex items-center">
@@ -83,8 +72,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-8 border-t border-gray-700 pt-4 text-center text-gray-400 text-sm">
+        <div className="mt-10 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
           <p>© 2025 M&F Kitchen. All rights reserved.</p>
+          <p className="mt-3 md:mt-0">Made with <Heart className="inline h-4 w-4 text-red-500 mx-1" /> for food lovers</p>
         </div>
       </div>
     </footer>

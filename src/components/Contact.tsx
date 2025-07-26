@@ -41,9 +41,9 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid gap-16 lg:grid-cols-2">
-          {/* Contact Info */}
-          <div className="space-y-12 text-base md:text-xl">
+        <div className="flex flex-col lg:flex-row gap-16">
+          {/* Contact Info + Socials (Left Side) */}
+          <div className="flex-1 space-y-12 text-base md:text-xl">
             <h3 className="text-3xl font-bold text-gray-800">Contact Information</h3>
 
             <div className="space-y-6">
@@ -85,8 +85,8 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* WhatsApp Box */}
-          <div className="bg-yellow-50 border border-yellow-300 rounded-3xl shadow-xl px-6 sm:px-10 py-10 text-center space-y-6">
+          {/* WhatsApp Box (Right Side) */}
+          <div className="flex-1 bg-yellow-50 border border-yellow-300 rounded-3xl shadow-xl px-6 sm:px-10 py-10 text-center space-y-6">
             <h3 className="text-3xl font-bold text-yellow-700">Let’s Chat on WhatsApp!</h3>
             <p className="text-gray-700 text-lg">Scan the QR or click to start chatting.</p>
 
