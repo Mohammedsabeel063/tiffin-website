@@ -6,19 +6,19 @@ const Header = () => {
   const [showFullAddress, setShowFullAddress] = useState(false);
 
   const shortAddress = 'Lakkasandra, Bengaluru';
-  const fullAddress = '12/3, 2nd Cross Rd, Lakkasandra, Wilson Garden, Bengaluru, Karnataka 560030';
+  const fullAddress = 'https://www.google.com/maps/place/16th+Cross,+4th+Main+Rd,+Lakkasandra,+Bengaluru,+Karnataka+560030';
   const googleMapsLink = `https://www.google.com/maps/place/${encodeURIComponent(fullAddress)}`;
 
   return (
     <header className="sticky top-0 z-50 w-full shadow-md bg-white bg-opacity-90 backdrop-blur-sm">
-      <div className="relative px-4 sm:px-6 lg:px-10 max-w-screen-xl mx-auto w-full">
+      <div className="relative px-0 sm:px-6 lg:px-10 max-w-screen-xl mx-auto w-full">
         <div className="flex flex-col md:flex-row justify-between items-center py-4 gap-y-4">
           {/* Left: Logo and Name */}
           <div className="flex items-center space-x-4 w-full md:w-auto justify-start">
-            <img 
+            <img
               src="/logo.png"
-              alt="Restaurant Logo" 
-              className="h-20 w-20 sm:h-24 sm:w-24 object-contain rounded-full border-4 border-yellow-500 shadow bg-white"
+              alt="Restaurant Logo"
+              className="h-24 w-24 sm:h-28 sm:w-28 object-contain rounded-full border-4 border-yellow-500 shadow bg-white"
             />
             <div>
               <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-serif leading-tight">
