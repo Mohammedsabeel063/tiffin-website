@@ -2,15 +2,17 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import About from './components/About';
 import Menu from './components/Menu';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8">
+    <div className="w-full max-w-[1600px] mx-auto overflow-hidden">
       <Header />
       <Hero />
+      <About />
       <Menu />
       <Contact />
       <Footer />
