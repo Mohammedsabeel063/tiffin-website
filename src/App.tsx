@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8">
+    <div className="container">
       <Header />
       <Hero />
       <Menu />
