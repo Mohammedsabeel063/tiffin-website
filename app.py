@@ -2,7 +2,7 @@ from flask import Flask, send_from_directory
 import os
 
 # Create Flask app
-app = Flask(__name__, static_folder='client/build', static_url_path='')
+app = Flask(__name__, static_folder='dist', static_url_path='')
 
 # Serve React build index.html on root
 @app.route('/')
