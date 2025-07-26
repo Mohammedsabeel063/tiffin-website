@@ -3,7 +3,7 @@ import os
 import time
 
 # Create Flask app
-app = Flask(__name__, static_folder='dist', static_url_path='')
+app = Flask(__name__, static_folder='.', static_url_path='')
 
 # Get current timestamp for cache busting
 BUILD_TIME = int(time.time())
@@ -69,8 +69,8 @@ def serve():
 # Serve any static assets (CSS, JS, images, etc.)
 @app.route('/<path:path>')
 def static_proxy(path):
-    # Try multiple possible locations
-    possible_dirs = ['dist', '.', 'static', 'build']
+    # Try multiple possible locations, prioritize root directory
+    possible_dirs = ['.', 'dist', 'static', 'build']
     
     for directory in possible_dirs:
         try:
