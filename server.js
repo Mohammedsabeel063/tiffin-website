@@ -1,4 +1,5 @@
-// server.js
+// server.js or server.ts
+
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -9,20 +10,27 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Serve static files from dist
+// 1. Serve static files from Vite's build output
 app.use(express.static(path.join(__dirname, 'dist')));
 
-// Serve sitemap.xml
+// 2. Serve sitemap.xml with correct MIME type
 app.get('/sitemap.xml', (req, res) => {
-  res.type('application/xml');
+  res.type('application/xml'); // Explicit MIME type
   res.sendFile(path.join(__dirname, 'public', 'sitemap.xml'));
 });
 
-// Catch-all route (must be '/*' not '*')
+// 3. Serve robots.txt (optional but recommended)
+app.get('/robots.txt', (req, res) => {
+  res.type('text/plain');
+  res.sendFile(path.join(__dirname, 'public', 'robots.txt'));
+});
+
+// 4. Catch-all route (for client-side routing like React Router)
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
+// Start server
 app.listen(PORT, () => {
-  console.log(`✅ Server is running on http://localhost:${PORT}`);
+  console.log(`✅ Server is running at http://localhost:${PORT}`);
 });
