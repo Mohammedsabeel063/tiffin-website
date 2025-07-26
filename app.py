@@ -1,12 +1,16 @@
 import os
 import time
+import mimetypes
 from flask import Flask, send_from_directory, make_response
 from whitenoise import WhiteNoise
 
+# ✅ Ensure .mp4 has the correct MIME type
+mimetypes.add_type("video/mp4", ".mp4")
+
 app = Flask(__name__, static_folder='dist', static_url_path='')
 
-# Serve static files with WhiteNoise
-app.wsgi_app = WhiteNoise(app.wsgi_app, root='dist', prefix='')
+# ✅ Serve static files with WhiteNoise (chunk-friendly + caching)
+app.wsgi_app = WhiteNoise(app.wsgi_app, root='dist', prefix='', max_age=31536000)
 app.wsgi_app.add_files('dist/assets', prefix='assets/')
 
 # Cache busting timestamp (for reference only)
