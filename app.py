@@ -12,7 +12,7 @@ app.wsgi_app.add_files('dist/assets', prefix='assets/')
 # Cache busting timestamp
 BUILD_TIME = int(time.time())
 
-# Utility: Debug file structure
+# Debug: Show files on server (optional)
 def debug_files():
     static_folder = app.static_folder
     print(f"Static folder: {static_folder}")
@@ -41,10 +41,9 @@ def find_index_html():
     print("❌ index.html not found in any location!")
     return None
 
-# Route: Serve index.html
+# Route: Root serves index.html
 @app.route('/')
-def serve():
-    debug_files()
+def serve_index():
     index_path = find_index_html()
     if not index_path:
         return "index.html not found", 500
@@ -62,7 +61,7 @@ def serve():
         print(f"Error serving index.html: {e}")
         return f"Error: {e}", 500
 
-# Route: Handle all 404s with index.html (SPA support)
+# Route: Static fallback (SPA support for React Router)
 @app.errorhandler(404)
 def not_found(e):
     index_path = find_index_html()
@@ -76,7 +75,11 @@ def not_found(e):
         print(f"404 fallback error: {e2}")
         return "Page not found", 404
 
-# Run app locally
+# Render needs this to avoid shutdown
+if __name__ != '__main__':
+    application = app
+
+# Local development
 if __name__ == '__main__':
     debug_files()
-    app.run(debug=True)
+    app.run(debug=False, host='0.0.0.0', port=10000)
