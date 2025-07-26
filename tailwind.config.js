@@ -6,8 +6,8 @@ export default {
       center: true,
       padding: '1rem',
       screens: {
-        sm: '100%',
-        md: '100%',
+        sm: '640px',
+        md: '768px',
         lg: '1024px',
         xl: '1280px',
       },

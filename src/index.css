@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Basic reset - minimal CSS to prevent zoom issues */
+/* Reset styles */
 * {
   margin: 0;
   padding: 0;
