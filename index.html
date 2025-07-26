@@ -23,6 +23,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>M&F Kitchen - Authentic Home-Style Cooking in Bengaluru</title>
     <meta name="description" content="Experience authentic home-style cooking at M&F Kitchen. Fresh ingredients, traditional flavors, and warm hospitality in Lakkasandra, Bengaluru.">
+    
+    <script>
+      // Force zoom level to 100%
+      document.addEventListener('DOMContentLoaded', function() {
+        // Set zoom to 100%
+        document.body.style.zoom = "100%";
+        document.body.style.transform = "scale(1)";
+        document.body.style.transformOrigin = "top left";
+        
+        // Prevent zoom gestures
+        document.addEventListener('gesturestart', function(e) {
+          e.preventDefault();
+        });
+        
+        document.addEventListener('gesturechange', function(e) {
+          e.preventDefault();
+        });
+        
+        document.addEventListener('gestureend', function(e) {
+          e.preventDefault();
+        });
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>

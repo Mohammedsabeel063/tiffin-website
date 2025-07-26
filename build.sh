@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Starting build process..."
+
 # Install Node.js dependencies
 echo "Installing Node.js dependencies..."
 npm install
@@ -8,8 +10,27 @@ npm install
 echo "Building React app..."
 npm run build
 
+# Check if build was successful
+if [ ! -d "dist" ]; then
+    echo "ERROR: dist directory not found after build!"
+    exit 1
+fi
+
+echo "Build files created:"
+ls -la dist/
+
+# Check if index.html exists
+if [ ! -f "dist/index.html" ]; then
+    echo "ERROR: index.html not found in dist directory!"
+    exit 1
+fi
+
+echo "index.html found in dist directory"
+
 # Install Python dependencies
 echo "Installing Python dependencies..."
 pip install -r requirements.txt
 
-echo "Build completed successfully!" 
+echo "Build completed successfully!"
+echo "Files in dist directory:"
+ls -la dist/ 

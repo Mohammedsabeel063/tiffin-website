@@ -1,11 +1,7 @@
 services:
   - type: web
     name: tiffin-website
-    env: python
-    buildCommand: chmod +x build.sh && ./build.sh
-    startCommand: gunicorn app:app
+    env: static
+    buildCommand: npm install && npm run build
     staticPublishPath: dist
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.11.0
     pullRequestPreviewsEnabled: true
