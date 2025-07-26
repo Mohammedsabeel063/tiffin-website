@@ -14,27 +14,26 @@ const Header = () => {
       <div className="absolute inset-0 bg-white/80 backdrop-blur-sm" />
 
       <div className="relative px-4 sm:px-6 lg:px-10 max-w-screen-xl mx-auto w-full">
-        <div className="flex flex-col md:flex-row justify-between items-center py-4 gap-y-4">
+        <div className="flex flex-col md:flex-row items-center justify-between py-4 gap-y-4">
           {/* Left: Logo and Name */}
-          <div className="flex items-center space-x-4 min-w-0 md:justify-start w-full md:w-auto">
-            <img 
+          <div className="flex items-center space-x-4 min-w-0 md:justify-start w-full md:w-auto me-auto">
+            <img
               src="/logo.png"
-              alt="Restaurant Logo" 
+              alt="Restaurant Logo"
               className="h-16 w-16 sm:h-20 sm:w-20 object-contain rounded-full border-4 border-yellow-500 shadow bg-white"
             />
             <div>
               <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-serif leading-tight">
                 M&F Kitchen
               </h1>
-              <p className="text-sm sm:text-base text-yellow-600 italic font-medium">
-                 Ghar Ka Swad, Cloud Mein
+              <p className="text-xs sm:text-sm text-yellow-600 italic font-medium">
+                Ghar Ka Swad, Cloud Mein
               </p>
-
             </div>
           </div>
 
           {/* Right: Nav + Info */}
-          <div className="hidden md:flex flex-col lg:flex-row items-center justify-end space-y-4 lg:space-y-0 lg:space-x-8 w-full md:w-auto">
+          <div className="hidden md:flex flex-col lg:flex-row items-center justify-end space-y-4 lg:space-y-0 lg:space-x-8 w-full md:w-auto ms-auto">
             <nav className="flex space-x-6 text-lg font-semibold">
               <a href="#home" className="text-gray-800 hover:text-yellow-600 transition-colors">Home</a>
               <a href="#about" className="text-gray-800 hover:text-yellow-600 transition-colors">About</a>
