@@ -16,14 +16,12 @@ const Menu = () => {
 
   return (
     <section id="menu" className="py-24 bg-white">
-      {/* Section Header */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-cinzel text-dark mb-4">Our Delicious Menu</h2>
         <p className="text-gray-600 text-lg">Enjoy our handpicked specials made with love and flavor.</p>
       </div>
 
-      {/* Dish Grid */}
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {dishes.map((dish, i) => (
           <div key={i} className="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
             <img src={dish.img} alt={dish.title} className="w-full h-56 object-cover" />
@@ -35,9 +33,8 @@ const Menu = () => {
         ))}
       </div>
 
-      {/* Tiffin Services */}
       <motion.div
-        className="mt-32 max-w-6xl mx-auto bg-gray-50 py-28 px-10 md:px-16 rounded-3xl shadow-lg"
+        className="mt-32 w-full max-w-screen-lg mx-auto bg-gray-50 py-20 px-6 sm:px-10 md:px-16 rounded-3xl shadow-lg"
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: 'easeOut' }}
@@ -53,32 +50,31 @@ const Menu = () => {
         </p>
 
         <div className="grid md:grid-cols-3 gap-6 text-gray-800 text-base">
-          <motion.div
-            className="p-6 rounded-xl shadow hover:scale-105 transition duration-300 bg-white"
-            whileHover={{ scale: 1.05 }}
-          >
-            <p className="font-semibold text-lg"><FaCheckCircle className="inline text-green-600 mr-2" /> VEG MEAL</p>
-            <p className="ml-6 mt-2">₹110/MEAL or ₹2750/MONTH</p>
-            <p className="ml-6 text-sm text-gray-700">(2 roti, Dal, Rice, sabji, fryums)</p>
-          </motion.div>
-
-          <motion.div
-            className="p-6 rounded-xl shadow hover:scale-105 transition duration-300 bg-white"
-            whileHover={{ scale: 1.05 }}
-          >
-            <p className="font-semibold text-lg"><FaCheckCircle className="inline text-green-600 mr-2" /> NON-VEG MEAL</p>
-            <p className="ml-6 mt-2">₹125/MEAL or ₹3125/MONTH</p>
-            <p className="ml-6 text-sm text-gray-700">(2 roti, Dal, Rice, Chicken curry, curd)</p>
-          </motion.div>
-
-          <motion.div
-            className="p-6 rounded-xl shadow hover:scale-105 transition duration-300 bg-white"
-            whileHover={{ scale: 1.05 }}
-          >
-            <p className="font-semibold text-lg"><FaCheckCircle className="inline text-green-600 mr-2" /> ROTI MEAL</p>
-            <p className="ml-6 mt-2">₹90/MEAL or ₹2250/MONTH</p>
-            <p className="ml-6 text-sm text-gray-700">(4 roti, sabji/Chicken, curd, pickle)</p>
-          </motion.div>
+          {[{
+            title: 'VEG MEAL',
+            price: '₹110/MEAL or ₹2750/MONTH',
+            desc: '(2 roti, Dal, Rice, sabji, fryums)'
+          }, {
+            title: 'NON-VEG MEAL',
+            price: '₹125/MEAL or ₹3125/MONTH',
+            desc: '(2 roti, Dal, Rice, Chicken curry, curd)'
+          }, {
+            title: 'ROTI MEAL',
+            price: '₹90/MEAL or ₹2250/MONTH',
+            desc: '(4 roti, sabji/Chicken, curd, pickle)'
+          }].map((item, i) => (
+            <motion.div
+              key={i}
+              className="p-6 rounded-xl shadow hover:scale-105 transition duration-300 bg-white"
+              whileHover={{ scale: 1.05 }}
+            >
+              <p className="font-semibold text-lg">
+                <FaCheckCircle className="inline text-green-600 mr-2" /> {item.title}
+              </p>
+              <p className="ml-6 mt-2">{item.price}</p>
+              <p className="ml-6 text-sm text-gray-700">{item.desc}</p>
+            </motion.div>
+          ))}
         </div>
 
         <motion.div
