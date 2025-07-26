@@ -42,7 +42,7 @@ const Contact = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-16">
-          {/* Contact Info + Socials (Left Side) */}
+          {/* Contact Info + Socials */}
           <div className="flex-1 space-y-12 text-base md:text-xl">
             <h3 className="text-3xl font-bold text-gray-800">Contact Information</h3>
 
@@ -60,8 +60,8 @@ const Contact = () => {
               <div className="flex items-start space-x-4">
                 <MapPin className="h-6 w-6 text-yellow-600" />
                 <div>
-                  <p className="text-gray-800">16th cross, 4th Main Rd</p>
-                  <p className="text-gray-800">Lakkasandra, Bengaluru, Karnataka 560030</p>
+                  <p className="text-gray-800">16/16, 4th Main Rd</p>
+                  <p className="text-gray-800">Lakkasandra, Wilson Garden, Bengaluru, Karnataka 560030</p>
                 </div>
               </div>
 
@@ -78,14 +78,14 @@ const Contact = () => {
 
             <div className="pt-10">
               <h4 className="text-2xl font-semibold text-gray-800 mb-4">Follow Us</h4>
-              <div className="flex space-x-6 text-2xl">
+              <div className="flex flex-wrap gap-x-6 gap-y-3 text-lg sm:text-xl md:text-2xl">
                 <a href="https://www.instagram.com/mnf_kitchen?igsh=eGp6cXB2MGh5NHdz" target="_blank" rel="noreferrer" className="text-pink-600 hover:text-pink-700">@mnf_kitchen</a>
                 <a href="https://youtube.com/@mnf-kitchen?si=t3ayntsNehfFwNKs" target="_blank" rel="noreferrer" className="text-red-600 hover:text-red-700">@mnf-kitchen</a>
               </div>
             </div>
           </div>
 
-          {/* WhatsApp Box (Right Side) */}
+          {/* WhatsApp Box */}
           <div className="flex-1 bg-yellow-50 border border-yellow-300 rounded-3xl shadow-xl px-6 sm:px-10 py-10 text-center space-y-6">
             <h3 className="text-3xl font-bold text-yellow-700">Let’s Chat on WhatsApp!</h3>
             <p className="text-gray-700 text-lg">Scan the QR or click to start chatting.</p>
@@ -111,15 +111,16 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Google Map */}
+        {/* ✅ Google Maps Embed (Works inside iframe) */}
         <div className="mt-16 overflow-hidden rounded-2xl shadow-xl w-full">
           <iframe
             title="Google Map"
-            src="https://www.google.com/maps/place/16%2F16,+4th+Main+Rd,+Lakkasandra,+Laljinagar,+Wilson+Garden,+Bengaluru,+Karnataka+560030/@12.9424088,77.5986461,18.56z/data=!4m6!3m5!1s0x3bae15b654fa61bd:0xef6f8d84a8c86fc0!8m2!3d12.9421946!4d77.5994701!16s%2Fg%2F11f0_g73gq?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d622.5949588799302!2d77.5986461!3d12.9424088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15b654fa61bd%3A0xef6f8d84a8c86fc0!2s16%2F16%2C%204th%20Main%20Rd%2C%20Lakkasandra%2C%20Wilson%20Garden%2C%20Bengaluru%2C%20Karnataka%20560030!5e0!3m2!1sen!2sin!4v1721971271234!5m2!1sen!2sin"
             width="100%"
             height="450"
             allowFullScreen
             loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
             className="w-full rounded-xl border-none"
           ></iframe>
         </div>
