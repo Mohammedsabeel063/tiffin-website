@@ -1,11 +1,11 @@
 services:
   - type: web
-    name: tiffin-website
-    env: python
-    buildCommand: chmod +x build.sh && ./build.sh
+    name: mandf-kitchen
+    runtime: python
+    buildCommand: npm run build
     startCommand: gunicorn app:app
-    staticPublishPath: dist
     envVars:
       - key: PYTHON_VERSION
-        value: 3.11.0
-    pullRequestPreviewsEnabled: true
+        value: 3.11
+      - key: NODE_VERSION
+        value: 18

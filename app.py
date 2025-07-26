@@ -1,3 +1,5 @@
+app = Flask(__name__, static_folder='dist', static_url_path='')
+
 from flask import Flask, send_from_directory, make_response, request
 import os
 import time
