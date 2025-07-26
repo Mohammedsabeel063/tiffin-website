@@ -100,7 +100,8 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-10 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
           <p>© 2025 M&F Kitchen. All rights reserved.</p>
-          <p className="mt-3 md:mt-0">Made with <Heart className="inline h-4 w-4 text-red-500 mx-1" /> for food lovers</p>
+          <p className="mt-3 md:mt-0"> Made with <Heart className="inline h-4 w-4 text-red-500 mx-1" /> by <span className="text-yellow-400 font-semibold">Mohammed Sabeel</span> for food lovers</p>
+
         </div>
       </div>
     </footer>
