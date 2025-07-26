@@ -10,30 +10,28 @@ const Header = () => {
   const googleMapsLink = `https://www.google.com/maps/place/${encodeURIComponent(fullAddress)}`;
 
   return (
-    <header className="relative shadow-md sticky top-0 z-50 w-full">
-      <div className="absolute inset-0 bg-white/80 backdrop-blur-sm" />
-
+    <header className="sticky top-0 z-50 w-full shadow-md bg-white bg-opacity-90 backdrop-blur-sm">
       <div className="relative px-4 sm:px-6 lg:px-10 max-w-screen-xl mx-auto w-full">
-        <div className="flex flex-col md:flex-row items-center justify-between py-4 gap-y-4">
+        <div className="flex flex-col md:flex-row justify-between items-center py-4 gap-y-4">
           {/* Left: Logo and Name */}
-          <div className="flex items-center space-x-4 min-w-0 md:justify-start w-full md:w-auto me-auto">
-            <img
+          <div className="flex items-center space-x-4 w-full md:w-auto justify-start">
+            <img 
               src="/logo.png"
-              alt="Restaurant Logo"
-              className="h-16 w-16 sm:h-20 sm:w-20 object-contain rounded-full border-4 border-yellow-500 shadow bg-white"
+              alt="Restaurant Logo" 
+              className="h-20 w-20 sm:h-24 sm:w-24 object-contain rounded-full border-4 border-yellow-500 shadow bg-white"
             />
             <div>
               <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 font-serif leading-tight">
                 M&F Kitchen
               </h1>
-              <p className="text-xs sm:text-sm text-yellow-600 italic font-medium">
+              <p className="text-sm sm:text-base text-yellow-600 italic font-medium">
                 Ghar Ka Swad, Cloud Mein
               </p>
             </div>
           </div>
 
           {/* Right: Nav + Info */}
-          <div className="hidden md:flex flex-col lg:flex-row items-center justify-end space-y-4 lg:space-y-0 lg:space-x-8 w-full md:w-auto ms-auto">
+          <div className="hidden md:flex flex-col lg:flex-row items-center justify-end space-y-4 lg:space-y-0 lg:space-x-8 w-full md:w-auto">
             <nav className="flex space-x-6 text-lg font-semibold">
               <a href="#home" className="text-gray-800 hover:text-yellow-600 transition-colors">Home</a>
               <a href="#about" className="text-gray-800 hover:text-yellow-600 transition-colors">About</a>
