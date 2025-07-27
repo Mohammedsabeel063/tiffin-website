@@ -10,8 +10,10 @@ const Header = () => {
   const googleMapsLink = `https://www.google.com/maps/place/${encodeURIComponent(fullAddress)}`;
 
   return (
-    <header className="sticky top-0 z-50 w-full shadow-md bg-white bg-opacity-90 backdrop-blur-sm">
-      <div className="relative px-0 sm:px-6 lg:px-10 max-w-screen-xl mx-auto w-full">
+    <header className="fixed top-0 z-50 w-full shadow-md bg-white bg-opacity-80 backdrop-blur-lg">
+      <div className="relative px-4 sm:px-6 lg:px-10 w-full">
+
+
         <div className="flex flex-col md:flex-row justify-between items-center py-4 gap-y-4">
           {/* Left: Logo and Name */}
           <div className="flex items-center space-x-4 w-full md:w-auto justify-start">

@@ -5,9 +5,10 @@ import { Star, Clock, Heart } from 'lucide-react';
 const Hero = () => {
   return (
     <section
-      id="home"
-      className="relative min-h-screen flex items-center overflow-hidden bg-black text-white"
-    >
+  id="home"
+  className="relative min-h-screen flex items-center overflow-hidden bg-black text-white pt-36"
+>
+
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center"
