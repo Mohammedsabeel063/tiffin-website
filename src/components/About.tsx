@@ -58,7 +58,7 @@ const About = () => {
                 playsInline
                 className="w-full h-full object-cover"
               >
-                <source src="https://drive.google.com/file/d/1RVYygh8CDk5YAJER2yIlmUPA-uEb-h4C/view?usp=drive_link" type="video/mp4" />
+                <source src="https://drive.google.com/uc?export=download&id=1RVYygh8CDk5YAJER2yIlmUPA-uEb-h4C" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
