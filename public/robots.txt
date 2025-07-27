@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://mandfkitchen.me/sitemap.xml
+Sitemap: https://www.mandfkitchen.me/sitemap.xml
