@@ -16,12 +16,10 @@ const About = () => {
 
       const parts = formatter.formatToParts(new Date());
       const dayString = parts.find(p => p.type === 'weekday')?.value ?? 'Sun';
-
       const hour = parseInt(parts.find(p => p.type === 'hour')?.value ?? '0', 10);
 
       const dayMap = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
-      const day = dayMap[dayString]; // will now safely be 0
-
+      const day = dayMap[dayString];
 
       setIsOpen(day >= 1 && day <= 6 && hour >= 10 && hour < 22);
     };
@@ -47,9 +45,9 @@ const About = () => {
           </p>
         </div>
 
-        {/* Mission Section */}
-        <div className="grid md:grid-cols-2 gap-10 items-center mb-20 animate-fade-in-up max-w-[1280px] mx-auto">
-          {/* Local Video instead of Vimeo */}
+        {/* Mission Section - Widened */}
+        <div className="grid md:grid-cols-2 gap-10 items-center mb-20 animate-fade-in-up max-w-[90%] xl:max-w-[1200px] mx-auto">
+          {/* Local Video */}
           <div className="w-full h-full">
             <div className="rounded-3xl shadow-xl w-full aspect-video overflow-hidden">
               <video
@@ -59,7 +57,7 @@ const About = () => {
                 loop
                 playsInline
                 className="w-full h-full object-cover"
-               >
+              >
                 <source src="/mom-cooking.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
