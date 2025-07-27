@@ -15,11 +15,13 @@ const About = () => {
       });
 
       const parts = formatter.formatToParts(new Date());
-      const dayString = parts.find(p => p.type === 'weekday')?.value;
-      const hour = parseInt(parts.find(p => p.type === 'hour')?.value, 10);
+      const dayString = parts.find(p => p.type === 'weekday')?.value ?? 'Sun';
+
+      const hour = parseInt(parts.find(p => p.type === 'hour')?.value ?? '0', 10);
 
       const dayMap = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
-      const day = dayMap[dayString];
+      const day = dayMap[dayString]; // will now safely be 0
+
 
       setIsOpen(day >= 1 && day <= 6 && hour >= 10 && hour < 22);
     };
@@ -52,13 +54,15 @@ const About = () => {
             <div className="rounded-3xl shadow-xl w-full aspect-video overflow-hidden">
               <video
                 ref={videoRef}
-                src="/mom-cooking.mp4"
                 autoPlay
                 muted
                 loop
                 playsInline
                 className="w-full h-full object-cover"
-              />
+               >
+                <source src="/mom-cooking.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
 
