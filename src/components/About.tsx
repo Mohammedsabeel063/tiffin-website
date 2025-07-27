@@ -58,7 +58,7 @@ const About = () => {
                 playsInline
                 className="w-full h-full object-cover"
               >
-                 <source src="/api/video" type="video/mp4" />
+                <source src="/mom-cooking.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
