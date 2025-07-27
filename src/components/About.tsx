@@ -56,6 +56,7 @@ const About = () => {
                 frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
+                loading="lazy" 
                 title="M&F Kitchen Video"
               ></iframe>
             </div>
