@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/(.*).mp4",
+      "source": "/mom-cooking.mp4",
       "headers": [
         {
           "key": "Content-Type",
