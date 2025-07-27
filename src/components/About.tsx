@@ -47,20 +47,19 @@ const About = () => {
 
         {/* Mission Section - Widened */}
         <div className="grid md:grid-cols-2 gap-10 items-center mb-20 animate-fade-in-up max-w-[90%] xl:max-w-[1200px] mx-auto">
-  {/* Vimeo Embedded Video */}
-  <div className="w-full h-full">
-    <div className="rounded-3xl shadow-xl w-full aspect-video overflow-hidden">
-      <iframe
-        src="https://player.vimeo.com/video/1104942134?autoplay=1&loop=1&muted=1&background=1"
-        className="w-full h-full"
-        frameBorder="0"
-        allow="autoplay; fullscreen; picture-in-picture"
-        allowFullScreen
-        title="M&F Kitchen Video"
-      ></iframe>
-    </div>
-  </div>
-</div>
+          {/* Vimeo Embedded Video */}
+          <div className="w-full h-full">
+            <div className="rounded-3xl shadow-xl w-full aspect-video overflow-hidden">
+              <iframe
+                src="https://player.vimeo.com/video/1104942134?autoplay=1&loop=1&muted=1&background=1"
+                className="w-full h-full"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                title="M&F Kitchen Video"
+              ></iframe>
+            </div>
+          </div>
 
           {/* Text */}
           <div className="space-y-6 text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
