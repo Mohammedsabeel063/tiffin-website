@@ -33,26 +33,33 @@ const Header = () => {
           </div>
 
           {/* Right: Nav + Info */}
-          <div className="hidden md:flex flex-col lg:flex-row items-center justify-end space-y-4 lg:space-y-0 lg:space-x-8 w-full md:w-auto">
+          <div className="hidden md:flex items-center justify-end flex-1 space-x-8">
+            {/* Navigation */}
             <nav className="flex space-x-6 text-lg font-semibold">
               <a href="#home" className="text-gray-800 hover:text-yellow-600 transition-colors">Home</a>
               <a href="#about" className="text-gray-800 hover:text-yellow-600 transition-colors">About</a>
               <a href="#menu" className="text-gray-800 hover:text-yellow-600 transition-colors">Menu</a>
+              <a href="#founder" className="text-gray-800 hover:text-yellow-600 transition-colors">Founder's Note</a>
               <a href="#contact" className="text-gray-800 hover:text-yellow-600 transition-colors">Contact</a>
-            </nav>
-            <div className="flex items-center space-x-6 pl-0 lg:pl-6 border-l-0 lg:border-l border-gray-300 text-base">
-              <div className="flex items-center text-gray-800">
+             </nav>
+
+            {/* Phone + Address */}
+            <div className="flex items-center space-x-6 border-l border-gray-300 pl-6 text-sm md:text-base max-w-[350px] overflow-hidden">
+              {/* Phone */}
+              <div className="flex items-center text-gray-800 shrink-0">
                 <Phone className="h-5 w-5 mr-2 text-yellow-600" />
-                <a href="tel:+919611333720" className="hover:text-yellow-600">+91 96113 33720</a>
+                <a href="tel:+919611333720" className="hover:text-yellow-600 whitespace-nowrap">+91 96113 33720</a>
               </div>
+
+              {/* Address */}
               <div
-                className="flex items-center cursor-pointer text-gray-800 hover:text-yellow-600"
+                className="flex items-center cursor-pointer text-gray-800 hover:text-yellow-600 truncate"
                 onClick={() => window.open(googleMapsLink, '_blank')}
                 onMouseEnter={() => setShowFullAddress(true)}
                 onMouseLeave={() => setShowFullAddress(false)}
               >
-                <MapPin className="h-5 w-5 mr-2 text-yellow-600" />
-                <span className="overflow-hidden whitespace-nowrap text-ellipsis max-w-[180px]">
+                <MapPin className="h-5 w-5 mr-2 text-yellow-600 shrink-0" />
+                <span className="truncate">
                   {showFullAddress ? fullAddress : shortAddress}
                 </span>
               </div>

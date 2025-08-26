@@ -76,11 +76,30 @@ const Contact = () => {
               </div>
             </div>
 
+            {/* ✅ Updated Social Icons with Handles */}
             <div className="pt-10">
               <h4 className="text-2xl font-semibold text-gray-800 mb-4">Follow Us</h4>
-              <div className="flex flex-wrap gap-x-6 gap-y-3 text-lg sm:text-xl md:text-2xl">
-                <a href="https://www.instagram.com/mnf_kitchen?igsh=eGp6cXB2MGh5NHdz" target="_blank" rel="noreferrer" className="text-pink-600 hover:text-pink-700">@mnf_kitchen</a>
-                <a href="https://youtube.com/@mnf-kitchen?si=t3ayntsNehfFwNKs" target="_blank" rel="noreferrer" className="text-red-600 hover:text-red-700">@mnf-kitchen</a>
+              <div className="flex flex-wrap gap-x-6 gap-y-4 text-lg sm:text-xl md:text-2xl items-center">
+                
+                <a
+                  href="https://www.instagram.com/mnf_kitchen?igsh=eGp6cXB2MGh5NHdz"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center text-pink-600 hover:text-pink-700 space-x-2"
+                >
+                  <FaInstagram />
+                  <span>@mnf_kitchen</span>
+                </a>
+
+                <a
+                  href="https://youtube.com/@mnf-kitchen?si=t3ayntsNehfFwNKs"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center text-red-600 hover:text-red-700 space-x-2"
+                >
+                  <FaYoutube />
+                  <span>@mnf-kitchen</span>
+                </a>
               </div>
             </div>
           </div>
@@ -111,7 +130,7 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* ✅ Google Maps Embed (Works inside iframe) */}
+        {/* ✅ Google Maps Embed */}
         <div className="mt-16 overflow-hidden rounded-2xl shadow-xl w-full">
           <iframe
             title="Google Map"
