@@ -78,7 +78,7 @@ const Footer = () => {
               </div>
               <div className="mt-4">
                 <p className="text-yellow-400 font-medium">Opening Hours</p>
-                <p>Mon – Sat: 10:00 AM – 10:00 PM</p>
+                <p>Mon – Sat: 7:00 AM – 10:00 PM</p>
                 <p className={`font-bold ${isOpen ? 'text-green-400' : 'text-red-400'}`}>
                   {isOpen ? 'Open Now' : 'Currently Closed'}
                 </p>
