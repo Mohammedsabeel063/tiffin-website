@@ -20,7 +20,7 @@ const Founder = () => {
 
           {/* Message */}
           <div className="space-y-6">
-            <p className="text-xs sm:text-sm">
+            <p className="text-sm sm:text-base">
               MNF Kitchen was born from a heartfelt belief — that everyone
               deserves the comfort of a home-style meal, even when they’re far
               from home. Having experienced firsthand the challenge of finding
@@ -28,20 +28,20 @@ const Founder = () => {
               I wanted to build something that feels like an extension of your
               own kitchen.
             </p>
-            <p className="text-xs sm:text-sm">
+            <p className="text-sm sm:text-base">
               What started as a small catering initiative has now grown into a
               space where every meal is prepared with care, honesty, and love.
               We don’t see ourselves as just another food business — we’re here
               to bring you food that nourishes, comforts, and connects.
             </p>
-            <p className="text-xs sm:text-sm">
+            <p className="text-sm sm:text-base">
               My vision is to make wholesome, homemade meals easily accessible
               for everyone — whether you’re at work, away from family, or simply
               craving the warmth of real food. With MNF Kitchen, you’ll always
               know that what’s on your plate is made with the same care as if it
               were cooked at home.
             </p>
-            <p className="text-xs sm:text-sm mb-4">
+            <p className="text-sm sm:text-base mb-4">
               Thank you for being a part of this journey — together, we’re
               bringing the taste of home closer to your everyday life.
             </p>
