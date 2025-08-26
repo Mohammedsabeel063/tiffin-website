@@ -94,7 +94,7 @@ const Contact = () => {
                 <Clock className="h-5 w-5 text-yellow-600" />
                 <div>
                   <p className="text-gray-800 text-sm md:text-base">
-                    Mon–Sat: 10:00 AM – 10:00 PM
+                    Mon–Sat: 7:00 AM – 10:00 PM
                   </p>
                   <p
                     className={`text-xs md:text-sm font-semibold ${

@@ -100,7 +100,7 @@ const About = () => {
             {
               icon: <Clock className="h-10 w-10 text-primary mx-auto mb-3" />,
               title: isOpen ? ' Open Now' : ' Closed',
-              subtitle: 'Mon–Sat: 10:00 AM – 10:00 PM'
+              subtitle: 'Mon–Sat: 7:00 AM – 10:00 PM'
             }
           ].map((item, i) => (
             <div key={i} className="bg-yellow-50 p-6 sm:p-10 rounded-2xl shadow hover:shadow-xl transition">
